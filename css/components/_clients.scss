@@ -1,0 +1,15 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.table-wrapper {
+  background-color: var.$background-color-primary;
+  min-height: calc(100vh - 93px);
+  padding: var.$gutter-base;
+
+  table {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border-radius: var.$border-radius;
+    overflow: hidden;
+    margin-top: 3rem;
+  }
+}

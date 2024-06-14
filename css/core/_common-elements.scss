@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+body {
+  font-family: var.$font-family-base;
+  font-weight: var.$font-weight-normal;
+  color: var.$text-color-base;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.btn-primary {
+  color: var.$text-color-primary;
+  background-color: var.$background-color-btn;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: var.$border-radius;
+  transition: .2s ease-in;
+  border: none;
+
+  &:hover {
+    background-color: var.$background-color-secondary;
+    color: var.$background-color-btn;
+  }
+}

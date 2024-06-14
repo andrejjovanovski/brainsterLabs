@@ -1,0 +1,49 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.projects-showcase {
+  background-color: var.$background-color-primary;
+  color: var.$background-color-secondary;
+
+  .filter-card {
+    @include mix.mobile-l-styles {
+      padding: 0 20px;
+    }
+
+  .card {
+    border: none!important;
+    border-radius: 10px!important;
+    -webkit-box-shadow: 7px 8px 19px 0px #000000;
+    box-shadow: 7px 8px 19px 0px #000000;
+    transition: ease .3s;
+
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      img {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 83%, 76.81% 96.82%, 50% 100%, 23.19% 96.82%, 0% 83%);
+      }
+    }
+
+    img {
+      border-radius: 10px!important;
+      border-bottom-left-radius: 0!important;
+      border-bottom-right-radius: 0!important;
+      height: 260px;
+    }
+
+    .card-body {
+
+      .tag {
+        display: inline-block;
+        background-color: var.$background-color-primary;
+        padding: 5px 10px;
+      }
+
+      .date {
+        font-size: .8rem;
+      }
+    }
+  }
+}

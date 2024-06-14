@@ -1,0 +1,41 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.banner {
+  position: relative;
+
+  h1 {
+    position: absolute;
+    z-index: 10;
+    color: var.$text-color-primary;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: var.$font-size-bigger;
+    font-weight: var.$font-weight-black;
+    filter: drop-shadow(5px 5px 10px #000000);
+    text-align: center;
+  }
+
+  .carousel {
+
+    .carousel-item {
+      height: 30rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .first-slide {
+      background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url("../images/banner-prog.jpg");
+    }
+
+    .second-slide {
+      background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url("../images/banner-3.jpg");
+    }
+
+    .third-slide {
+      background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url("../images/banner1.jpg");
+    }
+  }
+}

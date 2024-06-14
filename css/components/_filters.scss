@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.filters {
+  background-color: var.$background-color-secondary;
+
+  .active-marketing, .active-programing {
+    border-right: 1px solid var.$background-color-tertiary;
+
+    @include mix.mobile-l-styles {
+      border-right: none;
+      border-bottom: 1px solid var.$background-color-tertiary;
+    }
+  }
+  .col-md-4 {
+    color: var.$text-color-primary;
+
+    i {
+      display: none;
+    }
+
+    &:hover {
+      background-color: var.$background-color-btn !important;
+      color: var.$background-color-secondary !important;
+
+      i {
+        display: block!important;
+      }
+    }
+  }
+}
